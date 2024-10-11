@@ -111,15 +111,7 @@ export default function Home() {
         <div className="flex-1 w-64 ">
           <form onSubmit={handleSubmit(createProductOrUpdate)}>
             <div className="grid grid-cols-2 gap-4 m-4 w-1/2">
-              <div>Code:</div>
-              <div>
-                <input
-                  name="code"
-                  type="text"
-                  {...register("code", { required: true })}
-                  className="border border-black w-full"
-                />
-              </div>
+              
               <div>Name:</div>
               <div>
                 <input
@@ -129,36 +121,32 @@ export default function Home() {
                   className="border border-black w-full"
                 />
               </div>
-              <div>Description:</div>
+              <div>Date Of Birth:</div>
               <div>
-                <textarea
-                  name="description"
+                <input
+                  name="date_of_birth"
+                  type="date"
                   {...register("description", { required: false })}
                   className="border border-black w-full"
                 />
               </div>
-              <div>Price:</div>
+              <div>Member Number:</div>
               <div>
                 <input
-                  name="name"
+                  name="member_number"
                   type="number"
                   {...register("price", { required: true })}
                   className="border border-black w-full"
                 />
               </div>
-              <div>Category:</div>
+              <div>Interests:</div>
               <div>
-                <select
-                  name="category"
-                  {...register("category", { required: true })}
-                  className="border border-black w-full"
-                >
-                  {category.map((c) => (
-                    <option key={c._id} value={c._id}>
-                      {c.name}
-                    </option>
-                  ))}
-                </select>
+                <input
+                    name="interests"
+                    type="text"
+                    {...register("interests", { required: true })}
+                    className="border border-black w-full"
+                  />
               </div>
               <div className="col-span-2">
                 {editMode ? (

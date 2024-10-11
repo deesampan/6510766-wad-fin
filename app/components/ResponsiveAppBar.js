@@ -145,6 +145,14 @@ export default function ResponsiveAppBar() {
               Categories
             </Button>
 
+            <Button
+              key={2}
+              onClick={() => router.push('/customer')}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              Customers
+            </Button>
+
             {/* {pages.map((page) => (
               <Button
                 key={page}
